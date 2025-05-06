@@ -121,8 +121,6 @@ This project is backed by a full conceptual guide explaining churn analytics, SH
 - SHAP dashboard for interactive exploration
 
 
-If you'd like to learn more or collaborate on projects or other initiatives, feel free to connect on [LinkedIn](https://www.linkedin.com/in/prerna-burande-99678a1bb/) or check out my [portfolio site](https://youtheleader.com/).
-
 ---
 
 ## 📜 License
@@ -130,4 +128,7 @@ If you'd like to learn more or collaborate on projects or other initiatives, fee
 This project is open for educational and portfolio use. For commercial deployment, contact the author.
 
 ---
+
+## 📬 Contact
+If you'd like to learn more or collaborate on projects or other initiatives, feel free to connect on [LinkedIn](https://www.linkedin.com/in/prerna-burande-99678a1bb/) or check out my [portfolio site](https://youtheleader.com/).
 
