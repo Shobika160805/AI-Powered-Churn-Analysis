@@ -99,7 +99,7 @@ streamlit run deploy_streamlit.py
 
 This project is backed by a full conceptual guide explaining churn analytics, SHAP-based explainability, and model deployment strategy.
 
-📄 [Read Conceptual Study →](#) *(Add link once hosted)*
+📄 [Read Conceptual Study →](https://github.com/Pre123140/AI-Powered-Customer-Churn-Analysis/blob/main/CUSTOMER_CHURN_ANALYSIS.pdf) 
 
 ---
 
@@ -119,6 +119,9 @@ This project is backed by a full conceptual guide explaining churn analytics, SH
 - Customer lifetime value prediction
 - Real-time churn scoring API
 - SHAP dashboard for interactive exploration
+
+
+If you'd like to learn more or collaborate on projects or other initiatives, feel free to connect on [LinkedIn](https://www.linkedin.com/in/prerna-burande-99678a1bb/) or check out my [portfolio site](https://youtheleader.com/).
 
 ---
 
