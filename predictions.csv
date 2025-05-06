@@ -1,0 +1,11 @@
+gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,PaperlessBilling,MonthlyCharges,TotalCharges,MultipleLines_No phone service,MultipleLines_Yes,InternetService_Fiber optic,InternetService_No,OnlineSecurity_No internet service,OnlineSecurity_Yes,OnlineBackup_No internet service,OnlineBackup_Yes,DeviceProtection_No internet service,DeviceProtection_Yes,TechSupport_No internet service,TechSupport_Yes,StreamingTV_No internet service,StreamingTV_Yes,StreamingMovies_No internet service,StreamingMovies_Yes,Contract_One year,Contract_Two year,PaymentMethod_Credit card (automatic),PaymentMethod_Electronic check,PaymentMethod_Mailed check,Predicted_Churn
+0,0,1,0,1,0,1,24.8,24.8,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,0,False,False,True,False,1
+1,0,0,0,41,1,1,25.25,996.45,False,True,False,True,True,False,True,False,True,False,True,False,True,False,True,False,0,False,False,False,False,0
+0,0,1,1,52,1,0,19.35,1031.7,False,False,False,True,True,False,True,False,True,False,True,False,True,False,True,False,0,True,False,False,True,0
+0,0,0,0,1,1,0,76.35,76.35,False,False,True,False,False,False,False,False,False,True,False,False,False,False,False,False,0,False,False,True,False,1
+1,0,0,0,67,1,0,50.55,3260.1,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,0,True,False,False,False,0
+0,1,1,0,68,1,1,89.6,6127.6,False,True,True,False,False,False,False,True,False,False,False,False,False,False,False,True,0,False,False,False,False,1
+0,0,1,1,23,1,1,77.15,1759.4,False,True,False,False,False,True,False,False,False,True,False,True,False,True,False,False,0,True,False,False,False,0
+1,0,1,1,72,1,0,72.1,5016.65,False,True,False,False,False,True,False,True,False,True,False,True,False,False,False,False,0,True,True,False,False,0
+1,0,0,0,70,1,1,104.0,7250.15,False,True,True,False,False,True,False,False,False,False,False,True,False,True,False,True,0,True,True,False,False,1
+1,0,0,0,1,1,0,19.4,19.4,False,False,False,True,True,False,True,False,True,False,True,False,True,False,True,False,0,False,False,False,True,0
