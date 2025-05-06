@@ -125,7 +125,7 @@ This project is backed by a full conceptual guide explaining churn analytics, SH
 
 ## 📜 License
 
-This project is open for educational and portfolio use. For commercial deployment, contact the author.
+This project is open for educational use only. For commercial deployment, contact the author.
 
 ---
 
