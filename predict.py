@@ -45,26 +45,54 @@ df = pd.get_dummies(df, columns=multi_cat_cols, drop_first=True)
 # Prepare features
 X = df.drop("Churn", axis=1, errors="ignore")
 X_scaled = scaler.transform(X)
+X_scaled_df = pd.DataFrame(X_scaled, columns=X.columns)
+
 
 # Make predictions
-y_pred = model.predict(X_scaled)
+churn_probabilities = model.predict_proba(X_scaled)[:, 1]
+X_scaled["Churn Risk (%)"] = churn_probabilities * 100
+X_scaled_df["Churn Risk (%)"] = (churn_probabilities * 100).round(2)
+
+def generate_recommendation(score, tenure):
+    if score > 80 and tenure < 6:
+        return "Offer 2-month discount"
+    elif score > 60:
+        return "Provide personalized call"
+    elif score > 40:
+        return "Send retention email"
+    else:
+        return "Low risk - No action needed"
+
+
+# tenure must exist in X or df (check where it is!)
+X_scaled_df["Recommendation"] = df["tenure"].values  # temporarily pull tenure from original df
+X_scaled_df["Recommendation"] = X_scaled_df.apply(
+    lambda row: generate_recommendation(row["Churn Risk (%)"], row["Recommendation"]), axis=1
+)
+
+
 
 # Save predictions to CSV
 predictions_df = pd.DataFrame(X, columns=X.columns)
-predictions_df["Predicted_Churn"] = y_pred
+predictions_df["Predicted_Churn"] = churn_probabilities
 predictions_df.to_csv("predictions.csv", index=False)
+X_scaled_df.to_csv("predictions.csv", index=False)
 print("✅ Predictions saved to predictions.csv")
 
 # ----- ADVANCED VISUALIZATIONS -----
 # 1️⃣ Churn Distribution
 plt.figure(figsize=(6, 4))
-sns.countplot(x=y_pred, palette="viridis")
+sns.countplot(x=churn_probabilities, palette="viridis")
 plt.title("Churn Prediction Distribution")
 plt.xlabel("Churn")
 plt.ylabel("Count")
 plt.xticks(ticks=[0, 1], labels=["No", "Yes"])
 plt.savefig(os.path.join(plot_dir, "churn_distribution.png"))
 print("✅ Churn distribution plot saved.")
+plt.figure(figsize=(6, 4))
+sns.boxplot(x=df["Churn"], y=df["tenure"], palette="coolwarm")
+plt.title("Tenure vs Churn")
+plt.savefig("plots/tenure_vs_churn.png")
 
 # 2️⃣ Feature Importance (if model supports it)
 if hasattr(model, 'feature_importances_'):

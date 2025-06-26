@@ -1,4 +1,5 @@
 from fpdf import FPDF
+from datetime import datetime
 import os
 
 class PDF(FPDF):
@@ -29,9 +30,8 @@ pdf = PDF()
 pdf.set_auto_page_break(auto=True, margin=15)
 pdf.add_page()
 
-# Report Content
 pdf.chapter_title("1. Overview")
-pdf.chapter_body("This report provides insights from the churn analysis, including key metrics and visualizations.")
+pdf.chapter_body(f"This report provides insights from the churn analysis using RandomForestClassifier.\n\nGenerated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
 pdf.chapter_title("2. Key Metrics")
 metrics_text = f"""

@@ -60,14 +60,14 @@ if "Churn" in df.columns:
 
 # Plot churn distribution
 plt.figure(figsize=(6,4))
-sns.countplot(x="Churn", data=df, palette="viridis")
+sns.countplot(x="Churn", data=df, palette="viridis",legend=False)
 plt.title("Churn Distribution")
 plt.savefig("plots/churn_distribution.png")
 plt.close()
 
 # Tenure vs Churn
 plt.figure(figsize=(6,4))
-sns.boxplot(x="Churn", y="tenure", data=df, palette="coolwarm")
+sns.boxplot(x="Churn", y="tenure", data=df, hue="Churn", palette="coolwarm", dodge=False)
 plt.title("Tenure vs Churn")
 plt.savefig("plots/tenure_vs_churn.png")
 plt.close()
